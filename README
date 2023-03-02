@@ -1,0 +1,66 @@
+This is a program I wrote in college. It's mostly a curiosity. But
+also, it somehow still runs, and kind of works. Props to the Perl
+folks for a good compatibility policy.
+
+------------------------------
+
+The Canine File Manager, by Russell P. Mull (c) 2001
+Version 0.5
+
+---- Licence ----
+GPL 2.0: see COPYING
+
+
+---- Installation ----
+This program requires Perl/Tk.  If you don't already have it, get it from CPAN:
+http://www.cpan.org. 
+
+--- Disclaimer ---
+I can't recommend cfm for anything terrible important in its current form.  It
+seems to work well, but I make no guarantees that bad things won't happen.  
+But if they do, tell me!
+
+--- Use ---
+CFM is pretty straightforward.  Right click on a file to get context menu, or
+double click it to open it with the default viewer.  All input is done in the
+pane at the bottom of the window.  
+
+CFM can be controlled almost entirely with the keyboard.  (I'm working on it)
+I've endeavoured to make the keybindings familiar.  The only real non-standard
+one is for the context menu.  (i)  
+
+
+main keybindings:
+	j: up
+	k: down
+	shift-j: select up
+	shift-k: select down
+	i: context menu	
+
+text input keybindings:
+	ctrl-g: cancel text input
+	ctrl-a: beginning of line
+	ctrl-e: end of line
+	etc. (like in any other X program)
+
+other keybindings:
+	ctrl-g: goto directory  (unless you're inputting a string already)
+	l:	limit file listing to the given regular expression. 
+	ctrl-s: i-search.  Interactively selects all files matching the input
+		string
+	F5:	Refresh.  (I'll probably bind this to alt-r as well)
+
+
+--- Configuration ---
+Colors, Fonts, widget styles, and file viewers can all be controlled in .cfmrc.  
+Note that this is a perl script - it is read and parsed in the context of cfm.  
+So, if you know perl, you should be right at home.  CFM comes with an example, 
+example.cfmrc.  
+
+--- History ---
+It is duly noted that CFM is a decendant of VSH, by Dowe Keller.  
+http://www.sierratel.com/dowe/vsh.html
+
+
+--- Feedback ---
+Let me know if you use cfm!

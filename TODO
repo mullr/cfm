@@ -1,0 +1,30 @@
+--- 0.6 ---
+ * make single operations apply to the selection anchor, not neccessarily the 
+	first item of the selection
+ * Improve the help file
+ * Goto ~ doesn't work (do it right: ~user should work too)
+ * fix directory name munging once and for all (../, ./, etc)
+
+--- 1.0 ---
+ * Fix popup menu highlighting bug (minor)
+ * Bold default(top) action in context menu
+ * chmod/chown/chgrp things (likely in context menu)
+ * do an audit of function names, eliminate one liners (add directoy to bindings)
+ * figure out some way to split the code into multiple files.  With M4 or something, 
+	if nothing else.  
+ * reorganize functions in file
+ * look at double context menu generation
+ * Do something about the anchor bitmap corruption tk bug.  
+ * make selection move with page up and down (b and space)
+ * cleaner copy and paste.  
+ * a visual indicator for when input is required (red light)
+
+--- Post 1.0 ---
+ * do something about the main menubar
+	- smaller vertically
+	- keyboard accessible
+ * An intelligent bookmarks/history list
+ * A gui to add mime types
+ * Startup speed increases
+ * Allow wildcards in mime bindings: text/*
+ * Indication of starting an external command

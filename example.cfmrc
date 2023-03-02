@@ -1,0 +1,31 @@
+$htmlbrowser = "netscape";
+$relief      = 'groove';
+$menurelief  = 'raised';
+$font = "-b&h-lucida-medium-r-normal-*-*-100-*-*-p-*-iso8859-1";
+$xterm = "rxvt -bg black -fg darkgrey +sb -font fixed";
+$editor = "$xterm -e vim";
+$dirs_at_top = 1;
+
+# Mime type definitions and applications 
+
+$mime_defs{"\\.doc\$"} = "application/ms-word";
+$mime_descriptions{"application/ms-word"} = "Microsoft Word Document";
+
+$mime_defs{"\\.xcf\$"} = "application/x-gimp-image";
+$mime_descriptions{"application/x-gimp-image"} = "GIMP Image";
+add_menu_action("application/x-gimp-image", "Open with The GIMP", 'gimp %f &');
+add_menu_action("image/jpeg", "Edit with The GIMP", 'gimp %f &');
+add_menu_action("image/gif", "Edit with The GIMP", 'gimp %f &');
+add_menu_action("image/tif", "Edit with The GIMP", 'gimp %f &');
+add_menu_action("image/png", "Edit with The GIMP", 'gimp %f &');
+
+add_menu_action("text/plain", "Edit in XEmacs", "xemacs %f &");
+add_menu_action("directory", "Shell here", 'cd %f ; $xterm &');
+add_menu_action("directory", "Add Directory to XMMS Playlist", 'xmms %f &');
+#add_menu_action("directory", "Perl Subroutine Test", sub { print "Hello, world!\n"; });
+
+add_menu_action("text/html", "Edit with Bluefish", "bluefish %f &");
+
+add_menu_action("text/x-c", "Lint", "lclint %f");
+
+$mime_defs{"\\.pls\$"} = "text/xmms-playlist";
